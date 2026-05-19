@@ -1,0 +1,15 @@
+##49.字母异位词分组
+
+
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        d={}
+        for word in strs:
+            w = ''.join(sorted(word))
+            if w not in d:
+                d[w]=[]
+            d[w].append(word)
+         
+        return sorted(d.values(),key=len)
+            
