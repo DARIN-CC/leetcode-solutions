@@ -1,6 +1,6 @@
 ##49.字母异位词分组
 
-
+solution:遍历 strs,对每个单词排序。排序后相同的单词说明它们是异位词。使用排序后的字符串作为哈希表 key 进行分组。
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
